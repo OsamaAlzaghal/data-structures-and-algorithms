@@ -3,6 +3,7 @@
 This repo is created to update the data structure challenges.
 
 ---
+
 ## Table of content
 | Challenge | Title |
 | ----------- | ----------- |
