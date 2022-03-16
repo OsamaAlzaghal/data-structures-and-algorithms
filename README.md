@@ -7,4 +7,5 @@ This repo is created to update the data structure challenges.
 ## Table of content
 | Challenge | Title |
 | ----------- | ----------- |
-| 1 | [array-reverse](./Class&#32;01) |
+| 01 | [array-reverse](./DataStructure/DataStructure/DSA/ArrayShift) |
+| 02 | [array-insert-shift](DataStructure/DataStructure/DSA/ArrayReverse) |
