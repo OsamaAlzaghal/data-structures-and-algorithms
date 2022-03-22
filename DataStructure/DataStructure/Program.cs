@@ -1,4 +1,5 @@
-﻿using DataStructure.DSA.ArrayReverse;
+﻿using DataStructure.DSA.ArrayBinarySearch;
+using DataStructure.DSA.ArrayReverse;
 using DataStructure.DSA.ArrayShift;
 using System;
 
@@ -8,10 +9,10 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             // int[] array = { 1, 2, 3, 4, 5, 6, 7 };
-            // ArrayReverse.reverseArray(array);       
+            // ArrayReverse.reverseArray(array);
 
+            /*
             int[] arrOne = { 2, 4, 6, -8 };
             int[] arrTwo = { 42, 8, 15, 23, 42 };
             int[] newArrOne = ArrayShift.insertShiftArray(arrOne, 5);
@@ -23,7 +24,12 @@ namespace DataStructure
             Console.WriteLine("Arrays before and after shifting:");
             Console.WriteLine(string.Join(", ", arrTwo));
             Console.WriteLine(string.Join(", ", newArrTwo));
+            */
 
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 4));
+            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 7));
+            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 25));
 
         }
     }
