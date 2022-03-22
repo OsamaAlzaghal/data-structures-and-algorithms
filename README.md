@@ -9,3 +9,4 @@ This repo is created to update the data structure challenges.
 | ----------- | ----------- |
 | 01 | [array-reverse](./DataStructure/DataStructure/DSA/ArrayReverse) |
 | 02 | [array-insert-shift](./DataStructure/DataStructure/DSA/ArrayShift) |
+| 03 | [array-binary-search](./DataStructure/DataStructure/DSA/ArrayBinarySearch) |
