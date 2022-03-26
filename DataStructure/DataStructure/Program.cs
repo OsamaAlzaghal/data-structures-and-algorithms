@@ -1,6 +1,7 @@
 ﻿using DataStructure.DSA.ArrayBinarySearch;
 using DataStructure.DSA.ArrayReverse;
 using DataStructure.DSA.ArrayShift;
+using DataStructure.DSA.LinkedList;
 using System;
 
 namespace DataStructure
@@ -26,10 +27,20 @@ namespace DataStructure
             Console.WriteLine(string.Join(", ", newArrTwo));
             */
 
+            /*
             int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
             Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 4));
             Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 7));
             Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 25));
+            */
+
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.Insert(10);
+            testLink.Insert(15);
+            testLink.Insert(18);
+            testLink.Insert(20);
+            Console.WriteLine(testLink.LinkedListToString()); 
+            Console.WriteLine(testLink.Includes(10));
 
         }
     }
