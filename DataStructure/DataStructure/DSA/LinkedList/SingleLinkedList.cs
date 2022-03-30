@@ -9,6 +9,12 @@ namespace DataStructure.DSA.LinkedList
     public class SingleLinkedList
     {
         public Node head;
+        public static int counter = 0;
+
+        public int GetCounter()
+        {
+            return counter;
+        }
 
         public void Insert(int data)
         {
@@ -17,6 +23,7 @@ namespace DataStructure.DSA.LinkedList
             head = newNode;
         }
 
+        
         public bool Includes(int data)
         {
             Node temp = head;
@@ -52,6 +59,7 @@ namespace DataStructure.DSA.LinkedList
 
         public Node(int data)
         {
+            SingleLinkedList.counter++;
             this.data = data;
             next = null;
         }
