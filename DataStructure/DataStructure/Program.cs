@@ -2,7 +2,6 @@
 using DataStructure.DSA.ArrayReverse;
 using DataStructure.DSA.ArrayShift;
 using DataStructure.DSA.LinkedList;
-using DataStructure.DSA.LinkedListInsertions;
 using System;
 
 namespace DataStructure
@@ -35,7 +34,7 @@ namespace DataStructure
             Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 25));
             */
 
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             // Created new Linked List called testLink. 
             // The head will point to null since it's empty.
             testLink.AppendLink(777);
