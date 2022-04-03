@@ -1,9 +1,11 @@
 # Challenge Summary
 Create a method that takes an integer as argument and returns k-th value from the end of a linked list without using any built-in methods.
 
+---
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![linked-list-kth](linked-list-kth.png)
 
+---
 ## Approach & Efficiency
 I used for loop to traverse the linked list and created a counter so when I create a new node, I increment the counter by one. The solution is to keep traverseing linked list length - K, which is the location of the searched element since it starts from the end of a linked list. If K is greater than the length or below zero, it will throw an exception and return -1. It costs Big O(n) for time complexity and Big O(1) for space complexity.
 
