@@ -14,6 +14,31 @@ namespace DataStructure.DSA.LinkedList
         {
             return counter;
         }
+        public int KthFromEnd(int k)
+        {
+            try
+            {
+                if (k > counter || k < 0)
+                {
+                    throw new Exception("Exception: k is greater than the length of the linked list or less than zero, returned ");
+                }
+                else
+                {
+                    Node temp = head;
+                    for (int i = 1; i < counter - k; i++)
+                    {
+                        temp = temp.next;
+                    }
+                    return temp.data;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+                return -1;
+            }
+        }
+
         public void AppendLink(int data)
         {
             if (head == null)
