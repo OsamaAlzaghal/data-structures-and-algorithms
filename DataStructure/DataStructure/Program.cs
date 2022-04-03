@@ -35,41 +35,26 @@ namespace DataStructure
             */
 
             SingleLinkedList testLink = new SingleLinkedList();
-            // Created new Linked List called testLink. 
-            // The head will point to null since it's empty.
             testLink.AppendLink(777);
-            // Add to the last.
-            // [777] -> NULL 
             testLink.Insert(10);
-            // Add to the front.
-            // [10] -> [777] -> NULL
             testLink.InsertAfter(10, 15);
-            // Add after 10.
-            // [10] -> [15] -> [777] -> NULL
             testLink.InsertBefore(777, 123);
-            // Add before 777.
-            // [10] -> [15] -> [123] -> [777] -> NULL
             testLink.InsertAfter(123, 999);
-            // Add after 123.
-            // [10] -> [15] -> [123] -> [999] -> [777] -> NULL
             testLink.AppendLink(100);
-            // Add to the last.
-            // [10] -> [15] -> [123] -> [999] -> [777] -> [100] -> NULL
             testLink.InsertAfter(123, 76);
-            // Add after 123.
-            // [10] -> [15] -> [123] -> [76] -> [999] -> [777] -> [100] -> NULL
             testLink.AppendLink(101010);
-            // Add to the last.
-            // [10] -> [15] -> [123] -> [76] -> [999] -> [777] -> [100] -> [101010] -> NULL
             testLink.DeleteNode(999);
-            // This was optional, but I did it.
-            // [10] -> [15] -> [123] -> [76] -> [777] -> [100] -> [101010] -> NULL
             Console.WriteLine(testLink.LinkedListToString());
             Console.WriteLine($"Counter: {testLink.GetCounter()}");
-            // We have 7 nodes since we deleted one.
             Console.WriteLine($"Includes 76? {testLink.Includes(76)}.");
-            // To check if there is a node containing 76.
-            
+            // [10] -> [15] -> [123] -> [76] -> [777] -> [100] -> [101010] -> NULL
+            Console.WriteLine(testLink.KthFromEnd(0));
+            Console.WriteLine(testLink.KthFromEnd(4));
+            Console.WriteLine(testLink.KthFromEnd(2));
+            // Both should throw exception with a message and return -1.
+            Console.WriteLine(testLink.KthFromEnd(23));
+            Console.WriteLine(testLink.KthFromEnd(-5));
+
 
         }
     }

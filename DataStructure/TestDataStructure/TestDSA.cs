@@ -1,7 +1,6 @@
 using System;
 using Xunit;
 using DataStructure.DSA.LinkedList;
-using DataStructure.DSA.LinkedListInsertions;
 
 namespace TestDataStructure
 {
@@ -72,7 +71,7 @@ namespace TestDataStructure
         [Fact]
         public void AppendLinkTest()
         {
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             testLink.AppendLink(777);
             testLink.AppendLink(100);
             testLink.AppendLink(15);
@@ -83,7 +82,7 @@ namespace TestDataStructure
         [Fact]
         public void InsertBeforeMiddleTest()
         {
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             // If the list is empty, I can't insert before a value so I print
             // that it's empty.
             testLink.Insert(1);
@@ -97,7 +96,7 @@ namespace TestDataStructure
         [Fact]
         public void InsertBeforeFirstTest()
         {
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             // If the list is empty, I can't insert before a value so I print
             // that it's empty.
             testLink.Insert(777);
@@ -108,7 +107,7 @@ namespace TestDataStructure
         [Fact]
         public void InsertAfterMiddle()
         {
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             testLink.AppendLink(1);
             testLink.AppendLink(2);
             testLink.AppendLink(3);
@@ -119,12 +118,66 @@ namespace TestDataStructure
         [Fact]
         public void InsertAfterLast()
         {
-            LinkedListInsertions testLink = new LinkedListInsertions();
+            SingleLinkedList testLink = new SingleLinkedList();
             testLink.AppendLink(1);
             testLink.AppendLink(2);
             testLink.AppendLink(3);
             testLink.InsertAfter(3, 99);
             Assert.Equal("[1] -> [2] -> [3] -> [99] -> NULL", testLink.LinkedListToString());
         }
+
+        [Fact]
+        public void GreaterThanLengthTest()
+        {
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.AppendLink(1);
+            testLink.AppendLink(2);
+            testLink.AppendLink(3);
+            // It will throw an exception and return -1.
+            Assert.Equal(-1, testLink.KthFromEnd(6));
+        }
+
+        [Fact]
+        public void LengthEqualsKTest()
+        {
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.AppendLink(1);
+            testLink.AppendLink(2);
+            // K=1; because the counter of length starts from 0 and not 1.
+            // so it is equal to the counter/length.
+            Assert.Equal(2, testLink.KthFromEnd(1));
+        }
+
+        [Fact]
+        public void NegativeKValue()
+        {
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.AppendLink(1);
+            testLink.AppendLink(2);
+            testLink.AppendLink(3);
+            // It will throw an exception and return -1.
+            Assert.Equal(-1, testLink.KthFromEnd(-3));
+        }
+
+        [Fact]
+        public void SizeOfOneTest()
+        {
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.AppendLink(1);
+            Assert.Equal(1, testLink.KthFromEnd(0));
+        }
+
+        [Fact]
+        public void MiddleKTest()
+        {
+            SingleLinkedList testLink = new SingleLinkedList();
+            testLink.AppendLink(1);
+            testLink.AppendLink(2);
+            testLink.AppendLink(3);
+            testLink.AppendLink(4);
+            testLink.AppendLink(5);
+            Assert.Equal(3, testLink.KthFromEnd(2));
+        }
+
     }
 }
