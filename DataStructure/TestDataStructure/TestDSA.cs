@@ -134,18 +134,18 @@ namespace TestDataStructure
             testLink.AppendLink(2);
             testLink.AppendLink(3);
             // It will throw an exception and return -1.
-            Assert.Equal(-1, testLink.KthFromEnd(6));
+            Assert.Null(testLink.KthFromEnd(6));
         }
 
         [Fact]
         public void LengthEqualsKTest()
         {
-            SingleLinkedList testLink = new SingleLinkedList();
-            testLink.AppendLink(1);
-            testLink.AppendLink(2);
+            SingleLinkedList osama = new SingleLinkedList();
+            osama.AppendLink(1);
+            osama.AppendLink(2);
             // K=1; because the counter of length starts from 0 and not 1.
             // so it is equal to the counter/length.
-            Assert.Equal(2, testLink.KthFromEnd(1));
+            Assert.Equal(1, osama.KthFromEnd(1));
         }
 
         [Fact]
@@ -156,7 +156,7 @@ namespace TestDataStructure
             testLink.AppendLink(2);
             testLink.AppendLink(3);
             // It will throw an exception and return -1.
-            Assert.Equal(-1, testLink.KthFromEnd(-3));
+            Assert.Null(testLink.KthFromEnd(-3));
         }
 
         [Fact]

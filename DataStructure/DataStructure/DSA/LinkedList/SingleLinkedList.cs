@@ -14,7 +14,7 @@ namespace DataStructure.DSA.LinkedList
         {
             return counter;
         }
-        public int KthFromEnd(int k)
+        public int? KthFromEnd(int k)
         {
             try
             {
@@ -32,11 +32,11 @@ namespace DataStructure.DSA.LinkedList
                     return temp.data;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Console.Write(e.Message);
-                return -1;
-            }
+                return null;
+            }    
         }
 
         public void AppendLink(int data)

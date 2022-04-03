@@ -35,7 +35,7 @@ namespace DataStructure
             */
 
             SingleLinkedList testLink = new SingleLinkedList();
-            testLink.AppendLink(777);
+            /*testLink.AppendLink(777);
             testLink.Insert(10);
             testLink.InsertAfter(10, 15);
             testLink.InsertBefore(777, 123);
@@ -48,12 +48,14 @@ namespace DataStructure
             Console.WriteLine($"Counter: {testLink.GetCounter()}");
             Console.WriteLine($"Includes 76? {testLink.Includes(76)}.");
             // [10] -> [15] -> [123] -> [76] -> [777] -> [100] -> [101010] -> NULL
+            */
+            testLink.AppendLink(1);
             Console.WriteLine(testLink.KthFromEnd(0));
-            Console.WriteLine(testLink.KthFromEnd(4));
-            Console.WriteLine(testLink.KthFromEnd(2));
+            //Console.WriteLine(testLink.KthFromEnd(4));
+            //Console.WriteLine(testLink.KthFromEnd(2));
             // Both should throw exception with a message and return -1.
-            Console.WriteLine(testLink.KthFromEnd(23));
-            Console.WriteLine(testLink.KthFromEnd(-5));
+            //Console.WriteLine(testLink.KthFromEnd(23));
+            //Console.WriteLine(testLink.KthFromEnd(-5));
 
 
         }
