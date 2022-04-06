@@ -14,6 +14,45 @@ namespace DataStructure.DSA.LinkedList
         {
             return counter;
         }
+        /// <summary>
+        /// My ZipLists method returns the first list but it's modified to the zipped one,
+        /// list2 is removed and set to null.
+        /// </summary>
+        /// <param name="list1"></param>
+        /// <param name="list2"></param>
+        /// <returns>list1 after zipping it with list2</returns>
+        public static SingleLinkedList ZipLists(SingleLinkedList list1, SingleLinkedList list2)
+        {
+            Node before = list1.head;
+            Node current = list2.head;
+            Node after;
+            // Checks if list1 is empty.
+            if(before == null)
+            {
+                after = null;
+                current = null;
+                list1.head = list2.head;
+            }
+            else
+            {
+                after = before.next;
+            }
+            // Zip the arrows.
+            while(current != null)
+            {
+                // Adjust the pointer.
+                before.next = current;
+                // Shift the pointers.
+                before = current;
+                current = after;
+                after = before.next;
+            }
+            // Empty list2 since we don't need it anymore.
+            list2.head = null;
+            // Return list1 after zipping it.
+            return list1;
+        }
+
         public int? KthFromEnd(int k)
         {
             try
