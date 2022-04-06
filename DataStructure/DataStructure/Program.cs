@@ -34,7 +34,7 @@ namespace DataStructure
             Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 25));
             */
 
-            SingleLinkedList testLink = new SingleLinkedList();
+            //SingleLinkedList testLink = new SingleLinkedList();
             /*testLink.AppendLink(777);
             testLink.Insert(10);
             testLink.InsertAfter(10, 15);
@@ -49,14 +49,28 @@ namespace DataStructure
             Console.WriteLine($"Includes 76? {testLink.Includes(76)}.");
             // [10] -> [15] -> [123] -> [76] -> [777] -> [100] -> [101010] -> NULL
             */
-            testLink.AppendLink(1);
-            Console.WriteLine(testLink.KthFromEnd(0));
+
+            //testLink.AppendLink(1);
+            //Console.WriteLine(testLink.KthFromEnd(0));
             //Console.WriteLine(testLink.KthFromEnd(4));
             //Console.WriteLine(testLink.KthFromEnd(2));
             // Both should throw exception with a message and return -1.
             //Console.WriteLine(testLink.KthFromEnd(23));
             //Console.WriteLine(testLink.KthFromEnd(-5));
 
+            SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
+            list1.AppendLink(1);
+            list1.AppendLink(2);
+            list1.AppendLink(3);
+            SingleLinkedList list2 = new SingleLinkedList();  // Create second list and append some values.
+            list2.AppendLink(4);
+            list2.AppendLink(5);
+            list2.AppendLink(6);
+            Console.WriteLine(list2.LinkedListToString());    // Print the first list then the second one.
+            Console.WriteLine(list1.LinkedListToString());
+            SingleLinkedList.ZipLists(list1, list2);          // This will return a the zipped list. 
+            Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
+                                                              // with list2, you can print it and see the difference.
 
         }
     }

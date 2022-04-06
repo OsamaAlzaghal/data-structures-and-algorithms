@@ -13,3 +13,4 @@ C:\Users\acer\Advanced dotNET\data-structures-and-algorithms\DataStructure\DataS
 C:\Users\acer\Advanced dotNET\data-structures-and-algorithms\DataStructure\DataStructure\obj\Debug\net5.0\ref\DataStructure.dll
 C:\Users\acer\Advanced dotNET\data-structures-and-algorithms\DataStructure\DataStructure\obj\Debug\net5.0\DataStructure.pdb
 C:\Users\acer\Advanced dotNET\data-structures-and-algorithms\DataStructure\DataStructure\obj\Debug\net5.0\DataStructure.genruntimeconfig.cache
+C:\Users\acer\Advanced dotNET\data-structures-and-algorithms\DataStructure\DataStructure\obj\Debug\net5.0\DataStructure.csproj.AssemblyReference.cache

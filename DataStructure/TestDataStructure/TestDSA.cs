@@ -179,5 +179,62 @@ namespace TestDataStructure
             Assert.Equal(3, testLink.KthFromEnd(2));
         }
 
+        [Fact]
+        public void NullListsTest()
+        {
+            SingleLinkedList list1 = new SingleLinkedList();
+            SingleLinkedList list2 = new SingleLinkedList();
+            Assert.Null(SingleLinkedList.ZipLists(list1, list2).head);
+        }
+
+        [Fact]
+        public void FirstListIsNullTest()
+        {
+            SingleLinkedList list1 = new SingleLinkedList();
+            SingleLinkedList list2 = new SingleLinkedList();
+            list2.AppendLink(1);
+            list2.AppendLink(2);
+            list2.AppendLink(3);
+            Assert.Equal("[1] -> [2] -> [3] -> NULL", SingleLinkedList.ZipLists(list1, list2).LinkedListToString());
+        }
+
+        [Fact]
+        public void SecondListIsNullTest()
+        {
+            SingleLinkedList list1 = new SingleLinkedList();
+            SingleLinkedList list2 = new SingleLinkedList();
+            list1.AppendLink(1);
+            list1.AppendLink(2);
+            list1.AppendLink(3);
+            Assert.Equal("[1] -> [2] -> [3] -> NULL", SingleLinkedList.ZipLists(list1, list2).LinkedListToString());
+        }
+
+        [Fact]
+        public void FirstListLonger()
+        {
+            SingleLinkedList list1 = new SingleLinkedList();
+            SingleLinkedList list2 = new SingleLinkedList();
+            list1.AppendLink(1);
+            list1.AppendLink(2);
+            list1.AppendLink(3);
+            list1.AppendLink(4);
+            list2.AppendLink(5);
+            list2.AppendLink(6);
+            Assert.Equal("[1] -> [5] -> [2] -> [6] -> [3] -> [4] -> NULL", SingleLinkedList.ZipLists(list1, list2).LinkedListToString());
+        }
+
+        [Fact]
+        public void SecondListLonger()
+        {
+            SingleLinkedList list1 = new SingleLinkedList();
+            SingleLinkedList list2 = new SingleLinkedList();
+            list1.AppendLink(1);
+            list1.AppendLink(2);
+            list2.AppendLink(3);
+            list2.AppendLink(4);
+            list2.AppendLink(5);
+            list2.AppendLink(6);
+            Assert.Equal("[1] -> [3] -> [2] -> [4] -> [5] -> [6] -> NULL", SingleLinkedList.ZipLists(list1, list2).LinkedListToString());
+        }
     }
 }
