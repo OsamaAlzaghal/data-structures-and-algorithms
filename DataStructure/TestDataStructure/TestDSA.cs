@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using DataStructure.DSA.LinkedList;
+using DataStructure.DSA.Stack_Queue;
 
 namespace TestDataStructure
 {
@@ -235,6 +236,118 @@ namespace TestDataStructure
             list2.AppendLink(5);
             list2.AppendLink(6);
             Assert.Equal("[1] -> [3] -> [2] -> [4] -> [5] -> [6] -> NULL", SingleLinkedList.ZipLists(list1, list2).LinkedListToString());
+        }
+
+        [Fact]
+        public void StackPushTest()
+        {
+            Stack stack = new Stack();
+            stack.Push(10);
+            stack.Push(76);
+            stack.Push(15);
+            Assert.Equal(15, stack.top.data);
+        }
+
+        [Fact]
+        public void StackPopTest()
+        {
+            Stack stack = new Stack();
+            stack.Push(10);
+            stack.Push(15);
+            Assert.Equal(15, stack.Pop());
+        }
+
+        [Fact]
+        public void EmptyTheStackTest()
+        {
+            Stack stack = new Stack();
+            stack.Push(10);
+            stack.Push(15);
+            stack.Pop();
+            stack.Pop();
+            Assert.Null(stack.top);
+        }
+
+        [Fact]
+        public void StackPeekTest()
+        {
+            Stack stack = new Stack();
+            stack.Push(10);
+            stack.Push(15);
+            Assert.Equal(15, stack.Peek());
+        }
+
+        [Fact]
+        public void StackIsEmptyTest()
+        {
+            Stack stack = new Stack();
+            Assert.True(stack.IsEmpty());
+        }
+
+        [Fact]
+        public void PopPeekEmptyStack()
+        {
+            Stack stack = new Stack();
+            Assert.Null(stack.Pop());
+            Assert.Null(stack.Peek());
+        }
+
+        [Fact]
+        public void InsertIntoQueueTest()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(10);
+            queue.Enqueue(15);
+            queue.Enqueue(50);
+            Assert.Equal(10, queue.front.data);
+            Assert.Equal(50, queue.rear.data);
+        }
+
+        [Fact]
+        public void DeleteFromQueueTest()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(10);
+            queue.Enqueue(15);
+            Assert.Equal(10, queue.Dequeue());
+        }
+
+        [Fact]
+        public void PeekQueueTest()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(10);
+            queue.Enqueue(15);
+            queue.Enqueue(34);
+            queue.Enqueue(52);
+            Assert.Equal(10, queue.Peek());
+        }
+
+        [Fact]
+        public void EmptyTheQueueTest()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(10);
+            queue.Enqueue(15);
+            queue.Dequeue();
+            queue.Dequeue();
+            Assert.Null(queue.front);
+            Assert.Null(queue.rear);
+        }
+
+        [Fact]
+        public void QueueIsEmptyTest()
+        {
+            Queue queue = new Queue();
+            Assert.True(queue.IsEmpty());
+        }
+
+        [Fact]
+        public void DequeuePeekEmptyQueue()
+        {
+            Queue queue = new Queue();
+            Assert.Null(queue.Dequeue());
+            Assert.Null(queue.Peek());
         }
     }
 }
