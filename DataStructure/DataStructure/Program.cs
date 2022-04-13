@@ -59,36 +59,36 @@ namespace DataStructure
             //Console.WriteLine(testLink.KthFromEnd(23));
             //Console.WriteLine(testLink.KthFromEnd(-5));
 
-            //SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
-            //list1.AppendLink(1);
-            //list1.AppendLink(2);
-            //list1.AppendLink(3);
-            //SingleLinkedList list2 = new SingleLinkedList();  // Create second list and append some values.
-            //list2.AppendLink(4);
-            //list2.AppendLink(5);
-            //list2.AppendLink(6);
-            //Console.WriteLine(list2.LinkedListToString());    // Print the first list then the second one.
-            //Console.WriteLine(list1.LinkedListToString());
-            //SingleLinkedList.ZipLists(list1, list2);          // This will return a the zipped list. 
-            //Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
-            //                                                  // with list2, you can print it and see the difference.
+            SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
+            list1.AppendLink(1);
+            list1.AppendLink(2);
+            list1.AppendLink(3);
+            SingleLinkedList list2 = new SingleLinkedList();  // Create second list and append some values.
+            list2.AppendLink(4);
+            list2.AppendLink(5);
+            list2.AppendLink(6);
+            Console.WriteLine(list2.LinkedListToString());    // Print the first list then the second one.
+            Console.WriteLine(list1.LinkedListToString());
+            SingleLinkedList.ZipLists(list1, list2);          // This will return a the zipped list. 
+            Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
+                                                              // with list2, you can print it and see the difference.
 
-            Stack newStack = new Stack();
-            newStack.Peek();
-            newStack.Push(10);
-            newStack.Push(15);
-            Console.WriteLine(newStack.IsEmpty()); // false
-            newStack.Pop(); // 15
-            newStack.Peek(); // 10
+            //Stack newStack = new Stack();
+            //newStack.Peek();
+            //newStack.Push(10);
+            //newStack.Push(15);
+            //Console.WriteLine(newStack.IsEmpty()); // false
+            //newStack.Pop(); // 15
+            //newStack.Peek(); // 10
 
-            Console.WriteLine("\n************************");
-            Queue newQueue = new Queue();
-            newQueue.Peek();
-            newQueue.Enqueue(10);
-            newQueue.Enqueue(15);
-            Console.WriteLine(newQueue.IsEmpty()); // false
-            newQueue.Dequeue(); // 10
-            newQueue.Peek(); // 15
+            //Console.WriteLine("\n************************");
+            //Queue newQueue = new Queue();
+            //newQueue.Peek();
+            //newQueue.Enqueue(10);
+            //newQueue.Enqueue(15);
+            //Console.WriteLine(newQueue.IsEmpty()); // false
+            //newQueue.Dequeue(); // 10
+            //newQueue.Peek(); // 15
         }
     }
 }

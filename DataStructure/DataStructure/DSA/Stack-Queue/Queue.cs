@@ -20,7 +20,7 @@ namespace DataStructure.DSA.Stack_Queue
         public void Enqueue(int item)
         {
             Node.Node newNode = new Node.Node(item);
-            if (rear == null)
+            if (front == null)
             {
                 front = rear = newNode;
             }
