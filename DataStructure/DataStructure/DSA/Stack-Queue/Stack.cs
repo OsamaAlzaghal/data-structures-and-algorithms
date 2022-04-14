@@ -15,7 +15,7 @@ namespace DataStructure.DSA.Stack_Queue
             top = null;
         }
 
-        public void Push(int value)
+        public void Push(int? value)
         {
             Node.Node newNode = new Node.Node(value);
             if (top == null)
@@ -27,7 +27,7 @@ namespace DataStructure.DSA.Stack_Queue
                 newNode.next = top;
             }
             top = newNode;
-            Console.WriteLine("Pushed {0} to stack", value);
+            //Console.WriteLine("Pushed {0} to stack", value);
         }
 
         public int? Pop()
@@ -45,7 +45,7 @@ namespace DataStructure.DSA.Stack_Queue
                 return null;
             }
             Node.Node temp = top;
-            Console.WriteLine("Item popped is: {0}", top.data);
+            //Console.WriteLine("Item popped is: {0}", top.data);
             top = top.next;
 
             return temp.data;
