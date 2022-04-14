@@ -2,6 +2,7 @@
 using DataStructure.DSA.ArrayReverse;
 using DataStructure.DSA.ArrayShift;
 using DataStructure.DSA.LinkedList;
+using DataStructure.DSA.QueueUsingStacks;
 using DataStructure.DSA.Stack_Queue;
 using System;
 
@@ -59,19 +60,19 @@ namespace DataStructure
             //Console.WriteLine(testLink.KthFromEnd(23));
             //Console.WriteLine(testLink.KthFromEnd(-5));
 
-            SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
-            list1.AppendLink(1);
-            list1.AppendLink(2);
-            list1.AppendLink(3);
-            SingleLinkedList list2 = new SingleLinkedList();  // Create second list and append some values.
-            list2.AppendLink(4);
-            list2.AppendLink(5);
-            list2.AppendLink(6);
-            Console.WriteLine(list2.LinkedListToString());    // Print the first list then the second one.
-            Console.WriteLine(list1.LinkedListToString());
-            SingleLinkedList.ZipLists(list1, list2);          // This will return a the zipped list. 
-            Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
-                                                              // with list2, you can print it and see the difference.
+            //SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
+            //list1.AppendLink(1);
+            //list1.AppendLink(2);
+            //list1.AppendLink(3);
+            //SingleLinkedList list2 = new SingleLinkedList();  // Create second list and append some values.
+            //list2.AppendLink(4);
+            //list2.AppendLink(5);
+            //list2.AppendLink(6);
+            //Console.WriteLine(list2.LinkedListToString());    // Print the first list then the second one.
+            //Console.WriteLine(list1.LinkedListToString());
+            //SingleLinkedList.ZipLists(list1, list2);          // This will return a the zipped list. 
+            //Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
+            //                                                  // with list2, you can print it and see the difference.
 
             //Stack newStack = new Stack();
             //newStack.Peek();
@@ -89,6 +90,17 @@ namespace DataStructure
             //Console.WriteLine(newQueue.IsEmpty()); // false
             //newQueue.Dequeue(); // 10
             //newQueue.Peek(); // 15
+
+            PseudoQueue pseudoQueue = new PseudoQueue();
+            Console.WriteLine(pseudoQueue.PrintQueue());
+            pseudoQueue.Enqueue(10);
+            pseudoQueue.Enqueue(15);
+            pseudoQueue.Enqueue(20);
+            Console.WriteLine(pseudoQueue.PrintQueue());
+            pseudoQueue.Enqueue(5);
+            Console.WriteLine(pseudoQueue.PrintQueue());
+            Console.WriteLine(pseudoQueue.Dequeue());
+            Console.WriteLine(pseudoQueue.PrintQueue());
         }
     }
 }

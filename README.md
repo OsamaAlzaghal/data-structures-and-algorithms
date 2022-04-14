@@ -15,3 +15,4 @@ This repo is created to update the data structure challenges.
 | 07 | [linked-list-kth](./DataStructure/DataStructure/DSA/LinkedListKth)|
 | 08 | [linked-list-zip](./DataStructure/DataStructure/DSA/LinkedListZip)|
 | 10 | [Stack-Queue](./DataStructure/DataStructure/DSA/Stack-Queue)|
+| 11 | [PseudoQueue](./DataStructure/DataStructure/DSA/QueueUsingStacks)|
