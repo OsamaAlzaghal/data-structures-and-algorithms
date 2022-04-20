@@ -6,6 +6,7 @@ using DataStructure.DSA.QueueUsingStacks;
 using DataStructure.DSA.Stack_Queue;
 using DataStructure.DSA.AnimalsShelterQueue;
 using System;
+using DataStructure.DSA.Stack_Queue_Brackets;
 
 namespace DataStructure
 {
@@ -103,24 +104,25 @@ namespace DataStructure
             //Console.WriteLine(pseudoQueue.Dequeue());
             //Console.WriteLine(pseudoQueue.PrintQueue());
 
-            AnimalShelter animalShelter = new AnimalShelter(1, "Irbid Shelter");
-            Cat cat1 = new Cat("Lucy", 2);
-            Cat cat2 = new Cat("Sara", 4);
-            Dog dog1 = new Dog("Rex", 5);
-            Cat cat3 = new Cat("Meme", 1);
-            Dog dog2 = new Dog("Dennis", 7);
-            animalShelter.Enqueue(cat1);
-            animalShelter.Enqueue(cat2);
-            animalShelter.Enqueue(dog1);
-            animalShelter.Enqueue(cat3);
-            animalShelter.Enqueue(dog2);
-            Animal animal1 = animalShelter.Dequeue("cat");
-            Animal animal2 = animalShelter.Dequeue("dog");
-            Animal animal3 = animalShelter.Dequeue("cat");
-            Console.WriteLine(animal1.Name);
-            Console.WriteLine(animal2.Name);
-            Console.WriteLine(animal3.Name);
+            //AnimalShelter animalShelter = new AnimalShelter(1, "Irbid Shelter");
+            //Cat cat1 = new Cat("Lucy", 2);
+            //Cat cat2 = new Cat("Sara", 4);
+            //Dog dog1 = new Dog("Rex", 5);
+            //Cat cat3 = new Cat("Meme", 1);
+            //Dog dog2 = new Dog("Dennis", 7);
+            //animalShelter.Enqueue(cat1);
+            //animalShelter.Enqueue(cat2);
+            //animalShelter.Enqueue(dog1);
+            //animalShelter.Enqueue(cat3);
+            //animalShelter.Enqueue(dog2);
+            //Animal animal1 = animalShelter.Dequeue("cat");
+            //Animal animal2 = animalShelter.Dequeue("dog");
+            //Animal animal3 = animalShelter.Dequeue("cat");
+            //Console.WriteLine(animal1.Name);
+            //Console.WriteLine(animal2.Name);
+            //Console.WriteLine(animal3.Name);
 
+            Console.WriteLine(StackQueueBrackets.ValidateBrackets("{(})"));
         }
     }
 }

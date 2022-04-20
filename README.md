@@ -17,3 +17,4 @@ This repo is created to update the data structure challenges.
 | 10 | [Stack-Queue](./DataStructure/DataStructure/DSA/Stack-Queue)|
 | 11 | [Pseudo-Queue](./DataStructure/DataStructure/DSA/QueueUsingStacks)|
 | 12 | [Animals-Shelter-Queue](./DataStructure/DataStructure/DSA/AnimalsShelterQueue)|
+| 13 | [Stack-Queue-Brackets](./DataStructure/DataStructure/DSA/Stack-Queue-Brackets)|
