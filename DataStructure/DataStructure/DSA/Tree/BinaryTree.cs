@@ -18,6 +18,11 @@ namespace DataStructure.DSA.Tree
 
         public List<int> PreOrder(Node root)
         {
+            if(root == null)
+            {
+                Console.WriteLine("Tree is empty!");
+                return null;
+            }
             if(Root == root)
             {
                 list.Clear();
@@ -36,6 +41,11 @@ namespace DataStructure.DSA.Tree
 
         public List<int> InOrder(Node root)
         {
+            if (root == null)
+            {
+                Console.WriteLine("Tree is empty!");
+                return null;
+            }
             if (Root == root)
             {
                 list.Clear();
@@ -54,6 +64,11 @@ namespace DataStructure.DSA.Tree
 
         public List<int> PostOrder(Node root)
         {
+            if (root == null)
+            {
+                Console.WriteLine("Tree is empty!");
+                return null;
+            }
             if (Root == root)
             {
                 list.Clear();
@@ -72,12 +87,27 @@ namespace DataStructure.DSA.Tree
 
         public string ToString(List<int> list)
         {
+            if (list == null)
+            {
+                Console.WriteLine("Tree is empty!");
+                return null;
+            }
             string toStringList = "";
             foreach (var item in list)
             {
                 toStringList += $"{item}, ";
             }
             return toStringList = toStringList.Remove(toStringList.Length - 2);
+        }
+
+        public int? MaxTree()
+        {
+            if(InOrder(this.Root) == null)
+            {
+                Console.WriteLine("Tree is empty!");
+                return null;
+            }
+            return InOrder(this.Root).Max();
         }
     }
 
