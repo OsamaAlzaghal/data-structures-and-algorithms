@@ -19,3 +19,4 @@ This repo is created to update the data structure challenges.
 | 12 | [Animals-Shelter-Queue](./DataStructure/DataStructure/DSA/AnimalsShelterQueue)|
 | 13 | [Stack-Queue-Brackets](./DataStructure/DataStructure/DSA/Stack-Queue-Brackets)|
 | 15 | [Binary Tree & Binary Search Tree](./DataStructure/DataStructure/DSA/Tree)|
+| 16 | [Max Binary Tree](./DataStructure/DataStructure/DSA/MaxBinaryTree)|
