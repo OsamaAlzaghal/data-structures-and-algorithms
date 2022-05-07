@@ -10,6 +10,8 @@ using DataStructure.DSA.Stack_Queue_Brackets;
 using Node = DataStructure.DSA.Tree.Node;
 using System;
 using DataStructure.DSA.TreeBreadthFirst;
+using DataStructure.DSA.FizzBuzz;
+using System.Collections.Generic;
 
 namespace DataStructure
 {
@@ -146,7 +148,35 @@ namespace DataStructure
 
             BreadthFirst tree = new BreadthFirst();
             tree.Add(12); tree.Add(13); tree.Add(7); tree.Add(5); tree.Add(1); tree.Add(20); 
-            Console.WriteLine(tree.ToString(tree.BreadthFirstTree(tree.Root)));   
+            Console.WriteLine(tree.ToString(tree.BreadthFirstTree(tree.Root)));
+
+            Console.WriteLine("----------------------------------------------");
+
+            FizzBuzzTree root = new FizzBuzzTree("1");
+            root.Children.Add(new FizzBuzzTree("3"));
+            root.Children.Add(new FizzBuzzTree("5"));
+            root.Children.Add(new FizzBuzzTree("7"));
+            root.Children[0].Children.Add(new FizzBuzzTree("15"));
+            root.Children[0].Children.Add(new FizzBuzzTree("67"));
+            root.Children[0].Children.Add(new FizzBuzzTree("10"));
+            root.Children[1].Children.Add(new FizzBuzzTree("6"));
+            root.Children[2].Children.Add(new FizzBuzzTree("12"));
+            root.Children[2].Children.Add(new FizzBuzzTree("99"));
+            root.Children[2].Children.Add(new FizzBuzzTree("65"));
+
+            List<string> list = root.Traverse(root);
+            foreach (string s in list)
+            {
+                Console.WriteLine(s);
+            }
+
+            Console.WriteLine("----------------------------------------------");
+
+            List<string> list2 = root.FizzBuzz(root);
+            foreach (string s in list2)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
