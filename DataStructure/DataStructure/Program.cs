@@ -9,6 +9,7 @@ using DataStructure.DSA.Tree;
 using DataStructure.DSA.Stack_Queue_Brackets;
 using Node = DataStructure.DSA.Tree.Node;
 using System;
+using DataStructure.DSA.TreeBreadthFirst;
 
 namespace DataStructure
 {
@@ -126,11 +127,11 @@ namespace DataStructure
 
             //Console.WriteLine(StackQueueBrackets.ValidateBrackets("{(})"));
 
-            BinaryTree binaryTree = new BinaryTree(new Node(10));
-            binaryTree.Root.Left = new Node(8);
-            binaryTree.Root.Right = new Node(15);
-            binaryTree.Root.Left.Left = new Node(5);
-            binaryTree.Root.Right.Right = new Node(20);
+            //BinaryTree binaryTree = new BinaryTree(new Node(10));
+            //binaryTree.Root.Left = new Node(8);
+            //binaryTree.Root.Right = new Node(15);
+            //binaryTree.Root.Left.Left = new Node(5);
+            //binaryTree.Root.Right.Right = new Node(20);
             //Console.WriteLine(binaryTree.ToString(binaryTree.PreOrder(binaryTree.Root)));
             //Console.WriteLine(binaryTree.ToString(binaryTree.PostOrder(binaryTree.Root)));
             //Console.WriteLine(binaryTree.ToString(binaryTree.InOrder(binaryTree.Root)));
@@ -141,7 +142,11 @@ namespace DataStructure
             //binarySearchTree.Add(20);
             //Console.WriteLine(binarySearchTree.Contains(binaryTree.Root, 7));
             //Console.WriteLine(binarySearchTree.ToString(binarySearchTree.InOrder(binarySearchTree.Root)));
-            Console.WriteLine(binaryTree.MaxTree());
+            //Console.WriteLine(binaryTree.MaxTree());
+
+            BreadthFirst tree = new BreadthFirst();
+            tree.Add(12); tree.Add(13); tree.Add(7); tree.Add(5); tree.Add(1); tree.Add(20); 
+            Console.WriteLine(tree.ToString(tree.BreadthFirstTree(tree.Root)));   
         }
     }
 }
