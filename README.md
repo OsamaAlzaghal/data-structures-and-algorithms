@@ -22,3 +22,4 @@ This repo is created to update the data structure challenges.
 | 16 | [Max Binary Tree](./DataStructure/DataStructure/DSA/MaxBinaryTree)|
 | 17 | [Tree Breadth First](./DataStructure/DataStructure/DSA/TreeBreadthFirst)|
 | 18 | [Fizz Buzz](./DataStructure/DataStructure/DSA/FizzBuzz)|
+| 19 | [Mock Interview](./DataStructure/DataStructure/DSA/MockInterview(Class19))|
