@@ -7,11 +7,13 @@ using DataStructure.DSA.Stack_Queue;
 using DataStructure.DSA.AnimalsShelterQueue;
 using DataStructure.DSA.Tree;
 using DataStructure.DSA.Stack_Queue_Brackets;
-using Node = DataStructure.DSA.Tree.Node;
+//using Node = DataStructure.DSA.Tree.Node;
+using Node = DataStructure.DSA.MockInterview_Class_19_.Node;
 using System;
 using DataStructure.DSA.TreeBreadthFirst;
 using DataStructure.DSA.FizzBuzz;
 using System.Collections.Generic;
+using DataStructure.DSA.MockInterview_Class_19_;
 
 namespace DataStructure
 {
@@ -146,37 +148,58 @@ namespace DataStructure
             //Console.WriteLine(binarySearchTree.ToString(binarySearchTree.InOrder(binarySearchTree.Root)));
             //Console.WriteLine(binaryTree.MaxTree());
 
-            BreadthFirst tree = new BreadthFirst();
-            tree.Add(12); tree.Add(13); tree.Add(7); tree.Add(5); tree.Add(1); tree.Add(20); 
-            Console.WriteLine(tree.ToString(tree.BreadthFirstTree(tree.Root)));
+            //BreadthFirst tree = new BreadthFirst();
+            //tree.Add(12); tree.Add(13); tree.Add(7); tree.Add(5); tree.Add(1); tree.Add(20); 
+            //Console.WriteLine(tree.ToString(tree.BreadthFirstTree(tree.Root)));
 
-            Console.WriteLine("----------------------------------------------");
+            //Console.WriteLine("----------------------------------------------");
 
-            FizzBuzzTree root = new FizzBuzzTree("1");
-            root.Children.Add(new FizzBuzzTree("3"));
-            root.Children.Add(new FizzBuzzTree("5"));
-            root.Children.Add(new FizzBuzzTree("7"));
-            root.Children[0].Children.Add(new FizzBuzzTree("15"));
-            root.Children[0].Children.Add(new FizzBuzzTree("67"));
-            root.Children[0].Children.Add(new FizzBuzzTree("10"));
-            root.Children[1].Children.Add(new FizzBuzzTree("6"));
-            root.Children[2].Children.Add(new FizzBuzzTree("12"));
-            root.Children[2].Children.Add(new FizzBuzzTree("99"));
-            root.Children[2].Children.Add(new FizzBuzzTree("65"));
+            //FizzBuzzTree root = new FizzBuzzTree("1");
+            //root.Children.Add(new FizzBuzzTree("3"));
+            //root.Children.Add(new FizzBuzzTree("5"));
+            //root.Children.Add(new FizzBuzzTree("7"));
+            //root.Children[0].Children.Add(new FizzBuzzTree("15"));
+            //root.Children[0].Children.Add(new FizzBuzzTree("67"));
+            //root.Children[0].Children.Add(new FizzBuzzTree("10"));
+            //root.Children[1].Children.Add(new FizzBuzzTree("6"));
+            //root.Children[2].Children.Add(new FizzBuzzTree("12"));
+            //root.Children[2].Children.Add(new FizzBuzzTree("99"));
+            //root.Children[2].Children.Add(new FizzBuzzTree("65"));
 
-            List<string> list = root.Traverse(root);
-            foreach (string s in list)
-            {
-                Console.WriteLine(s);
-            }
+            //List<string> list = root.Traverse(root);
+            //foreach (string s in list)
+            //{
+            //    Console.WriteLine(s);
+            //}
 
-            Console.WriteLine("----------------------------------------------");
+            //Console.WriteLine("----------------------------------------------");
 
-            List<string> list2 = root.FizzBuzz(root);
-            foreach (string s in list2)
-            {
-                Console.WriteLine(s);
-            }
+            //List<string> list2 = root.FizzBuzz(root);
+            //foreach (string s in list2)
+            //{
+            //    Console.WriteLine(s);
+            //}
+
+            Directory Tree1 = new Directory();
+            Tree1.Root = new Node(1);
+            Tree1.Root.Left = new Node(2);
+            Tree1.Root.Right = new Node(3);
+            Tree1.Root.Left.Left = new Node(4);
+            Tree1.Root.Left.Right = new Node(5);
+            Console.WriteLine("# of leaves for tree 1 : " + Tree1.LeavesCount(Tree1.Root) + ".");
+
+            Directory Tree2 = new Directory();
+            Tree2.Root = new Node(1);
+            Tree2.Root.Left = new Node(2);
+            Tree2.Root.Right = new Node(3);
+            Tree2.Root.Left.Left = new Node(4);
+            Tree2.Root.Left.Right = new Node(5);
+            Tree2.Root.Right.Left = new Node(6);
+            Tree2.Root.Right.Right = new Node(7);
+            Console.WriteLine("# of leaves for tree 2 : " + Tree2.LeavesCount(Tree2.Root) + ".");
+
+            Console.WriteLine("Do they have equal # of leaves? "+ Tree1.EqualLeaves(Tree2.Root)+ ".");
+
         }
     }
 }
