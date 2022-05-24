@@ -14,6 +14,7 @@ using DataStructure.DSA.TreeBreadthFirst;
 using DataStructure.DSA.FizzBuzz;
 using System.Collections.Generic;
 using DataStructure.DSA.MockInterview_Class_19_;
+using DataStructure.DSA.InsertionSort;
 
 namespace DataStructure
 {
@@ -180,26 +181,28 @@ namespace DataStructure
             //    Console.WriteLine(s);
             //}
 
-            Directory Tree1 = new Directory();
-            Tree1.Root = new Node(1);
-            Tree1.Root.Left = new Node(2);
-            Tree1.Root.Right = new Node(3);
-            Tree1.Root.Left.Left = new Node(4);
-            Tree1.Root.Left.Right = new Node(5);
-            Console.WriteLine("# of leaves for tree 1 : " + Tree1.LeavesCount(Tree1.Root) + ".");
+            //Directory Tree1 = new Directory();
+            //Tree1.Root = new Node(1);
+            //Tree1.Root.Left = new Node(2);
+            //Tree1.Root.Right = new Node(3);
+            //Tree1.Root.Left.Left = new Node(4);
+            //Tree1.Root.Left.Right = new Node(5);
+            //Console.WriteLine("# of leaves for tree 1 : " + Tree1.LeavesCount(Tree1.Root) + ".");
+            //Directory Tree2 = new Directory();
+            //Tree2.Root = new Node(1);
+            //Tree2.Root.Left = new Node(2);
+            //Tree2.Root.Right = new Node(3);
+            //Tree2.Root.Left.Left = new Node(4);
+            //Tree2.Root.Left.Right = new Node(5);
+            //Tree2.Root.Right.Left = new Node(6);
+            //Tree2.Root.Right.Right = new Node(7);
+            //Console.WriteLine("# of leaves for tree 2 : " + Tree2.LeavesCount(Tree2.Root) + ".");
+            //Console.WriteLine("Do they have equal # of leaves? "+ Tree1.EqualLeaves(Tree2.Root)+ ".");
 
-            Directory Tree2 = new Directory();
-            Tree2.Root = new Node(1);
-            Tree2.Root.Left = new Node(2);
-            Tree2.Root.Right = new Node(3);
-            Tree2.Root.Left.Left = new Node(4);
-            Tree2.Root.Left.Right = new Node(5);
-            Tree2.Root.Right.Left = new Node(6);
-            Tree2.Root.Right.Right = new Node(7);
-            Console.WriteLine("# of leaves for tree 2 : " + Tree2.LeavesCount(Tree2.Root) + ".");
-
-            Console.WriteLine("Do they have equal # of leaves? "+ Tree1.EqualLeaves(Tree2.Root)+ ".");
-
+            int[] array = { 8, 4, 23, 42, 16, 15 };
+            InsertionSort.PrintArray(array);
+            InsertionSort.InsertionSortMethod(array);
+            InsertionSort.PrintArray(array);
         }
     }
 }
