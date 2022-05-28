@@ -23,4 +23,5 @@ This repo is created to update the data structure challenges.
 | 17 | [Tree Breadth First](./DataStructure/DataStructure/DSA/TreeBreadthFirst)|
 | 18 | [Fizz Buzz](./DataStructure/DataStructure/DSA/FizzBuzz)|
 | 19 | [Mock Interview](./DataStructure/DataStructure/DSA/MockInterview(Class19))|
-| 26 | [Insertion Sort](./DataStructure/DataStructure/DSA/InsertionSort)|
+| 26 | [Insertion Sort](./DataStructure/DataStructure/DSA/Sorting/Insertion)|
+| 27 | [Merge Sort](./DataStructure/DataStructure/DSA/Sorting/Merge)|
