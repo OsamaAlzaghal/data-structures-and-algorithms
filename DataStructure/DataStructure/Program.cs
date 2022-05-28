@@ -15,6 +15,7 @@ using DataStructure.DSA.FizzBuzz;
 using System.Collections.Generic;
 using DataStructure.DSA.MockInterview_Class_19_;
 using DataStructure.DSA.InsertionSort;
+using DataStructure.DSA.Sorting.Merge;
 
 namespace DataStructure
 {
@@ -199,10 +200,15 @@ namespace DataStructure
             //Console.WriteLine("# of leaves for tree 2 : " + Tree2.LeavesCount(Tree2.Root) + ".");
             //Console.WriteLine("Do they have equal # of leaves? "+ Tree1.EqualLeaves(Tree2.Root)+ ".");
 
+            //int[] array = { 8, 4, 23, 42, 16, 15 };
+            //InsertionSort.PrintArray(array);
+            //InsertionSort.InsertionSortMethod(array);
+            //InsertionSort.PrintArray(array);
+
             int[] array = { 8, 4, 23, 42, 16, 15 };
-            InsertionSort.PrintArray(array);
-            InsertionSort.InsertionSortMethod(array);
-            InsertionSort.PrintArray(array);
+            MergeSort.PrintArray(array);
+            MergeSort.MergesortMethod(array);
+            MergeSort.PrintArray(array);
         }
     }
 }
