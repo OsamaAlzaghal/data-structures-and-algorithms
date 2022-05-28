@@ -225,17 +225,22 @@ First step:
 ![](Images/FirstStep.jpg)
 
 Second step:
+
 ![](Images/SecondStep.jpg)
 
 Third step:
+
 ![](Images/ThirdStep.jpg)
 
 Fourth step:
+
 ![](Images/FourthStep.jpg)
 
 Fifth step:
+
 ![](Images/FifthStep.jpg)
 
 Final step:
+
 ![](Images/LastStep.jpg)
 
