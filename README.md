@@ -25,3 +25,4 @@ This repo is created to update the data structure challenges.
 | 19 | [Mock Interview](./DataStructure/DataStructure/DSA/MockInterview(Class19))|
 | 26 | [Insertion Sort](./DataStructure/DataStructure/DSA/Sorting/Insertion)|
 | 27 | [Merge Sort](./DataStructure/DataStructure/DSA/Sorting/Merge)|
+| 28 | [Quick Sort](./DataStructure/DataStructure/DSA/Sorting/Quick)|

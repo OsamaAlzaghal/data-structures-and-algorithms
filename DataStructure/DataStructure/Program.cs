@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using DataStructure.DSA.MockInterview_Class_19_;
 using DataStructure.DSA.InsertionSort;
 using DataStructure.DSA.Sorting.Merge;
+using DataStructure.DSA.Sorting.Quick;
 
 namespace DataStructure
 {
@@ -205,10 +206,15 @@ namespace DataStructure
             //InsertionSort.InsertionSortMethod(array);
             //InsertionSort.PrintArray(array);
 
+            //int[] array = { 8, 4, 23, 42, 16, 15 };
+            //MergeSort.PrintArray(array);
+            //MergeSort.MergesortMethod(array);
+            //MergeSort.PrintArray(array);
+
             int[] array = { 8, 4, 23, 42, 16, 15 };
-            MergeSort.PrintArray(array);
-            MergeSort.MergesortMethod(array);
-            MergeSort.PrintArray(array);
+            Quick_Sort.PrintArray(array);
+            Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
+            Quick_Sort.PrintArray(array);
         }
     }
 }
