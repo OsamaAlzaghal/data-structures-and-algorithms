@@ -26,3 +26,4 @@ This repo is created to update the data structure challenges.
 | 26 | [Insertion Sort](./DataStructure/DataStructure/DSA/Sorting/Insertion)|
 | 27 | [Merge Sort](./DataStructure/DataStructure/DSA/Sorting/Merge)|
 | 28 | [Quick Sort](./DataStructure/DataStructure/DSA/Sorting/Quick)|
+| 30 | [Hashtable](./DataStructure/DataStructure/DSA/Hashtable)|
