@@ -27,3 +27,4 @@ This repo is created to update the data structure challenges.
 | 27 | [Merge Sort](./DataStructure/DataStructure/DSA/Sorting/Merge)|
 | 28 | [Quick Sort](./DataStructure/DataStructure/DSA/Sorting/Quick)|
 | 30 | [Hashtable](./DataStructure/DataStructure/DSA/Hashtable)|
+| 31 | [Hashmap Repeated Word](./DataStructure/DataStructure/DSA/HashmapRepeatedWord)|

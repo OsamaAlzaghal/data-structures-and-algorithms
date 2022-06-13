@@ -17,6 +17,7 @@ using DataStructure.DSA.MockInterview_Class_19_;
 using DataStructure.DSA.InsertionSort;
 using DataStructure.DSA.Sorting.Merge;
 using DataStructure.DSA.Sorting.Quick;
+using DataStructure.DSA.HashmapRepeatedWord;
 
 namespace DataStructure
 {
@@ -211,10 +212,17 @@ namespace DataStructure
             //MergeSort.MergesortMethod(array);
             //MergeSort.PrintArray(array);
 
-            int[] array = { 8, 4, 23, 42, 16, 15 };
-            Quick_Sort.PrintArray(array);
-            Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
-            Quick_Sort.PrintArray(array);
+            //int[] array = { 8, 4, 23, 42, 16, 15 };
+            //Quick_Sort.PrintArray(array);
+            //Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
+            //Quick_Sort.PrintArray(array);
+
+            string test1 = "Once upon a time, there was a brave princess who...";
+            string test2 = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
+            // This should print "a".
+            Console.WriteLine(Hashmap.RepeatedWord(test1));
+            // This should print "summer".
+            Console.WriteLine(Hashmap.RepeatedWord(test2));
         }
     }
 }
