@@ -8,7 +8,7 @@ namespace DataStructure.DSA.Hashtable
 {
     public class TableNode
     {
-        public int Key;
+        public string Key;
         public string Value;
         public TableNode Next;
 
@@ -17,7 +17,7 @@ namespace DataStructure.DSA.Hashtable
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public TableNode(int key, string value)
+        public TableNode(string key, string value)
         {
             Key = key;
             Value = value;
