@@ -18,6 +18,7 @@ using DataStructure.DSA.InsertionSort;
 using DataStructure.DSA.Sorting.Merge;
 using DataStructure.DSA.Sorting.Quick;
 using DataStructure.DSA.HashmapRepeatedWord;
+using DataStructure.DSA.Hashtable;
 
 namespace DataStructure
 {
@@ -42,37 +43,6 @@ namespace DataStructure
             Console.WriteLine(string.Join(", ", newArrTwo));
             */
 
-            /*
-            int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 4));
-            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 7));
-            Console.WriteLine(ArrayBinarySearch.BinarySearch(arr, 25));
-            */
-
-            //SingleLinkedList testLink = new SingleLinkedList();
-            /*testLink.AppendLink(777);
-            testLink.Insert(10);
-            testLink.InsertAfter(10, 15);
-            testLink.InsertBefore(777, 123);
-            testLink.InsertAfter(123, 999);
-            testLink.AppendLink(100);
-            testLink.InsertAfter(123, 76);
-            testLink.AppendLink(101010);
-            testLink.DeleteNode(999);
-            Console.WriteLine(testLink.LinkedListToString());
-            Console.WriteLine($"Counter: {testLink.GetCounter()}");
-            Console.WriteLine($"Includes 76? {testLink.Includes(76)}.");
-            // [10] -> [15] -> [123] -> [76] -> [777] -> [100] -> [101010] -> NULL
-            */
-
-            //testLink.AppendLink(1);
-            //Console.WriteLine(testLink.KthFromEnd(0));
-            //Console.WriteLine(testLink.KthFromEnd(4));
-            //Console.WriteLine(testLink.KthFromEnd(2));
-            // Both should throw exception with a message and return -1.
-            //Console.WriteLine(testLink.KthFromEnd(23));
-            //Console.WriteLine(testLink.KthFromEnd(-5));
-
             //SingleLinkedList list1 = new SingleLinkedList();  // Create first list and append some values.
             //list1.AppendLink(1);
             //list1.AppendLink(2);
@@ -87,51 +57,6 @@ namespace DataStructure
             //Console.WriteLine(list1.LinkedListToString());    // Since the method return list1 after zipping it
             //                                                  // with list2, you can print it and see the difference.
 
-            //Stack newStack = new Stack();
-            //newStack.Peek();
-            //newStack.Push(10);
-            //newStack.Push(15);
-            //Console.WriteLine(newStack.IsEmpty()); // false
-            //newStack.Pop(); // 15
-            //newStack.Peek(); // 10
-
-            //Console.WriteLine("\n************************");
-            //Queue newQueue = new Queue();
-            //newQueue.Peek();
-            //newQueue.Enqueue(10);
-            //newQueue.Enqueue(15);
-            //Console.WriteLine(newQueue.IsEmpty()); // false
-            //newQueue.Dequeue(); // 10
-            //newQueue.Peek(); // 15
-
-            //PseudoQueue pseudoQueue = new PseudoQueue();
-            //Console.WriteLine(pseudoQueue.PrintQueue());
-            //pseudoQueue.Enqueue(10);
-            //pseudoQueue.Enqueue(15);
-            //pseudoQueue.Enqueue(20);
-            //Console.WriteLine(pseudoQueue.PrintQueue());
-            //pseudoQueue.Enqueue(5);
-            //Console.WriteLine(pseudoQueue.PrintQueue());
-            //Console.WriteLine(pseudoQueue.Dequeue());
-            //Console.WriteLine(pseudoQueue.PrintQueue());
-
-            //AnimalShelter animalShelter = new AnimalShelter(1, "Irbid Shelter");
-            //Cat cat1 = new Cat("Lucy", 2);
-            //Cat cat2 = new Cat("Sara", 4);
-            //Dog dog1 = new Dog("Rex", 5);
-            //Cat cat3 = new Cat("Meme", 1);
-            //Dog dog2 = new Dog("Dennis", 7);
-            //animalShelter.Enqueue(cat1);
-            //animalShelter.Enqueue(cat2);
-            //animalShelter.Enqueue(dog1);
-            //animalShelter.Enqueue(cat3);
-            //animalShelter.Enqueue(dog2);
-            //Animal animal1 = animalShelter.Dequeue("cat");
-            //Animal animal2 = animalShelter.Dequeue("dog");
-            //Animal animal3 = animalShelter.Dequeue("cat");
-            //Console.WriteLine(animal1.Name);
-            //Console.WriteLine(animal2.Name);
-            //Console.WriteLine(animal3.Name);
 
             //Console.WriteLine(StackQueueBrackets.ValidateBrackets("{(})"));
 
@@ -203,26 +128,9 @@ namespace DataStructure
             //Console.WriteLine("Do they have equal # of leaves? "+ Tree1.EqualLeaves(Tree2.Root)+ ".");
 
             //int[] array = { 8, 4, 23, 42, 16, 15 };
-            //InsertionSort.PrintArray(array);
-            //InsertionSort.InsertionSortMethod(array);
-            //InsertionSort.PrintArray(array);
-
-            //int[] array = { 8, 4, 23, 42, 16, 15 };
-            //MergeSort.PrintArray(array);
-            //MergeSort.MergesortMethod(array);
-            //MergeSort.PrintArray(array);
-
-            //int[] array = { 8, 4, 23, 42, 16, 15 };
             //Quick_Sort.PrintArray(array);
             //Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
             //Quick_Sort.PrintArray(array);
-
-            string test1 = "Once upon a time, there was a brave princess who...";
-            string test2 = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
-            // This should print "a".
-            Console.WriteLine(Hashmap.RepeatedWord(test1));
-            // This should print "summer".
-            Console.WriteLine(Hashmap.RepeatedWord(test2));
         }
     }
 }

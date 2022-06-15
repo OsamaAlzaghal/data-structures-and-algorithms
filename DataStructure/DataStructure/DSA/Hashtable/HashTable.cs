@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataStructure.DSA.Hashtable;
 
 namespace DataStructure.DSA.Hashtable
 {
@@ -29,13 +26,8 @@ namespace DataStructure.DSA.Hashtable
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public void Set(int key, string value)
+        public void Set(string key, string value)
         {
-            if (key < 0)
-            {
-                throw new Exception("Key value is negative and it's not allowed.");
-            }
-                
             int hashedKey = Hash(key);
             if (hashtable[hashedKey] == null)
             {
@@ -68,7 +60,7 @@ namespace DataStructure.DSA.Hashtable
         /// </summary>
         /// <param name="key"></param>
         /// <returns> Value associated with that key in the table </returns>
-        public string Get(int key)
+        public string Get(string key)
         {
             if (!Contains(key))
             {
@@ -91,28 +83,31 @@ namespace DataStructure.DSA.Hashtable
         /// </summary>
         /// <param name="key"></param>
         /// <returns> Boolean </returns>
-        public bool Contains(int key)
+        public bool Contains(string key)
         {
             int hashedKey = Hash(key);
             TableNode temp = hashtable[hashedKey];
             while (temp != null)
             {
                 if (temp.Key == key)
+                {
                     return true;
+                }
 
                 temp = temp.Next;
             }
+
             return false;
         }
-        
+
         /// <summary>
         /// A method that adds all the keys in the HashTable in a list.
         /// </summary>
         /// <returns> A list of keys </returns>
-        public List<int> Keys()
+        public List<string> Keys()
         {
             // Empty list that will hold ours keys.
-            List<int> keys = new List<int>();
+            List<string> keys = new List<string>();
             // Add all the items that are not null.
             List<TableNode> items = hashtable.Where(x => x != null).ToList();
             // Loop over the list and add the key for each item in the HashTable.
@@ -140,9 +135,15 @@ namespace DataStructure.DSA.Hashtable
         /// </summary>
         /// <param name="key"></param>
         /// <returns> the index for a single item. </returns>
-        public int Hash(int key)
+        public int Hash(string key)
         {
-            return key % hashTableSize;
+            int index = 7;
+            for (int i = 0; i < key.Length; i++)
+            {
+                int asciiVal = (int)key[i] * i;
+                index = index * 31 + asciiVal;
+            }
+            return index % hashTableSize;
         }
     }
 }
