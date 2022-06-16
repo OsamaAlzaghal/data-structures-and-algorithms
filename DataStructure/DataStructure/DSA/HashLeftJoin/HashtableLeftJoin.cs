@@ -34,8 +34,7 @@ namespace DataStructure.DSA.HashLeftJoin
                 TableNode temp = left.hashtable[i];
                 while (temp != null)
                 {
-                    if (right.Contains(temp.Key)) { arrayList.Add(new string[] { $"{temp.Key}", $"{temp.Value}", $"{right.Get($"{temp.Key}")}" }); }
-                    else { arrayList.Add(new string[] { $"{temp.Key}", $"{temp.Value}", null }); }
+                    arrayList.Add(new string[] { $"{temp.Key}", $"{temp.Value}", $"{right.Get($"{temp.Key}")}" }); 
                     temp = temp.Next;
                 }
             }
