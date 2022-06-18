@@ -7,7 +7,7 @@ namespace DataStructure.DSA.Hashtable
     public class HashTable
     {
         public int hashTableSize;
-        public TableNode[] hashtable;
+        public TableNode[] buckets;
 
         /// <summary>
         /// Constructor for the Hashtable.
@@ -16,7 +16,7 @@ namespace DataStructure.DSA.Hashtable
         public HashTable(int hashSize)
         {
             hashTableSize = hashSize;
-            hashtable = new TableNode[hashSize];
+            buckets = new TableNode[hashSize];
         }
 
         /// <summary>
@@ -29,14 +29,14 @@ namespace DataStructure.DSA.Hashtable
         public void Set(string key, string value)
         {
             int hashedKey = Hash(key);
-            if (hashtable[hashedKey] == null)
+            if (buckets[hashedKey] == null)
             {
-                hashtable[hashedKey] = new TableNode(key, value);
+                buckets[hashedKey] = new TableNode(key, value);
             }
             else
             {
                 // If we have a collision, we add the new item to the back of a specific node.
-                TableNode temp = hashtable[hashedKey];
+                TableNode temp = buckets[hashedKey];
                 // If our value is at the first index, we iterate only once so that the complexity
                 // is O(1), otherwise it will be O(n).
                 while (temp.Next != null || temp.Key == key)
@@ -69,7 +69,7 @@ namespace DataStructure.DSA.Hashtable
 
             int hashedKey = Hash(key);
 
-            TableNode temp = hashtable[hashedKey];
+            TableNode temp = buckets[hashedKey];
             while (temp.Key != key)
             {
                 temp = temp.Next;
@@ -86,7 +86,7 @@ namespace DataStructure.DSA.Hashtable
         public bool Contains(string key)
         {
             int hashedKey = Hash(key);
-            TableNode temp = hashtable[hashedKey];
+            TableNode temp = buckets[hashedKey];
             while (temp != null)
             {
                 if (temp.Key == key)
@@ -109,7 +109,7 @@ namespace DataStructure.DSA.Hashtable
             // Empty list that will hold ours keys.
             List<string> keys = new List<string>();
             // Add all the items that are not null.
-            List<TableNode> items = hashtable.Where(x => x != null).ToList();
+            List<TableNode> items = buckets.Where(x => x != null).ToList();
             // Loop over the list and add the key for each item in the HashTable.
             foreach (TableNode node in items)
             {

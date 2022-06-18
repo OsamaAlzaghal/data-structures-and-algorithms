@@ -9,11 +9,11 @@ namespace DataStructure.DSA.Tree
     public class BinaryTree
     {
         public Node Root { get; set; }
-        public List<int> list { get; set; }
+        public List<int> List { get; set; }
         public BinaryTree(Node root = null)
         {
             Root = root;
-            list = new List<int>();
+            List = new List<int>();
         }
 
         public List<int> PreOrder(Node root)
@@ -25,9 +25,9 @@ namespace DataStructure.DSA.Tree
             }
             if(Root == root)
             {
-                list.Clear();
+                List.Clear();
             }
-            list.Add(root.Value);
+            List.Add(root.Value);
             if(root.Left != null)
             {
                 PreOrder(root.Left);
@@ -36,7 +36,7 @@ namespace DataStructure.DSA.Tree
             {
                 PreOrder(root.Right);
             }
-            return list;
+            return List;
         }
 
         public List<int> InOrder(Node root)
@@ -48,18 +48,18 @@ namespace DataStructure.DSA.Tree
             }
             if (Root == root)
             {
-                list.Clear();
+                List.Clear();
             }
             if (root.Left != null)
             {
                 InOrder(root.Left);
             }
-            list.Add(root.Value);
+            List.Add(root.Value);
             if (root.Right != null)
             {
                 InOrder(root.Right);
             }
-            return list;
+            return List;
         }
 
         public List<int> PostOrder(Node root)
@@ -71,7 +71,7 @@ namespace DataStructure.DSA.Tree
             }
             if (Root == root)
             {
-                list.Clear();
+                List.Clear();
             }
             if (root.Left != null)
             {
@@ -81,8 +81,8 @@ namespace DataStructure.DSA.Tree
             {
                 PostOrder(root.Right);
             }
-            list.Add(root.Value);
-            return list;
+            List.Add(root.Value);
+            return List;
         }
 
         public string ToString(List<int> list)
