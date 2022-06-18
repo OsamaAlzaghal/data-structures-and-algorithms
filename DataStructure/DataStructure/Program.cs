@@ -1,24 +1,7 @@
-﻿using DataStructure.DSA.ArrayBinarySearch;
-using DataStructure.DSA.ArrayReverse;
-using DataStructure.DSA.ArrayShift;
-using DataStructure.DSA.LinkedList;
-using DataStructure.DSA.QueueUsingStacks;
-using DataStructure.DSA.Stack_Queue;
-using DataStructure.DSA.AnimalsShelterQueue;
-using DataStructure.DSA.Tree;
-using DataStructure.DSA.Stack_Queue_Brackets;
+﻿using DataStructure.DSA.Tree;
 //using Node = DataStructure.DSA.Tree.Node;
-using Node = DataStructure.DSA.MockInterview_Class_19_.Node;
-using System;
-using DataStructure.DSA.TreeBreadthFirst;
-using DataStructure.DSA.FizzBuzz;
+using DataStructure.DSA.Tree_Intersection;
 using System.Collections.Generic;
-using DataStructure.DSA.MockInterview_Class_19_;
-using DataStructure.DSA.InsertionSort;
-using DataStructure.DSA.Sorting.Merge;
-using DataStructure.DSA.Sorting.Quick;
-using DataStructure.DSA.HashmapRepeatedWord;
-using DataStructure.DSA.Hashtable;
 
 namespace DataStructure
 {
@@ -131,6 +114,18 @@ namespace DataStructure
             //Quick_Sort.PrintArray(array);
             //Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
             //Quick_Sort.PrintArray(array);
+
+            TreeIntersection intersection = new TreeIntersection();
+
+            BinarySearchTree tree1 = new BinarySearchTree();
+            tree1.Add(150); tree1.Add(100); tree1.Add(250); tree1.Add(75); tree1.Add(160);
+            tree1.Add(125); tree1.Add(175); tree1.Add(200); tree1.Add(300); tree1.Add(350); tree1.Add(500);
+
+            BinarySearchTree tree2 = new BinarySearchTree();
+            tree2.Add(42); tree2.Add(100); tree2.Add(600); tree2.Add(15); tree2.Add(160); tree2.Add(125);
+            tree2.Add(175); tree2.Add(500); tree2.Add(4); tree2.Add(200); tree2.Add(350);
+
+            TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
         }
     }
 }

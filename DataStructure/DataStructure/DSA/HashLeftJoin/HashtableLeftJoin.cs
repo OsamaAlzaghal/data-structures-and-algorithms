@@ -16,9 +16,9 @@ namespace DataStructure.DSA.HashLeftJoin
             if (right == null)
             {
                 List<string[]> leftList = new List<string[]>();
-                for (int i = 0; i < left.hashtable.Length; i++)
+                for (int i = 0; i < left.buckets.Length; i++)
                 {
-                    TableNode temp = left.hashtable[i];
+                    TableNode temp = left.buckets[i];
                     while (temp != null)
                     {
                         leftList.Add(new string[] { $"{temp.Key}", $"{temp.Value}" });
@@ -29,9 +29,9 @@ namespace DataStructure.DSA.HashLeftJoin
             }
 
             List<string[]> arrayList = new List<string[]>();
-            for (int i = 0; i < left.hashtable.Length; i++)
+            for (int i = 0; i < left.buckets.Length; i++)
             {
-                TableNode temp = left.hashtable[i];
+                TableNode temp = left.buckets[i];
                 while (temp != null)
                 {
                     arrayList.Add(new string[] { $"{temp.Key}", $"{temp.Value}", $"{right.Get($"{temp.Key}")}" }); 

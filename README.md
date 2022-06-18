@@ -28,4 +28,5 @@ This repo is created to update the data structure challenges.
 | 28 | [Quick Sort](./DataStructure/DataStructure/DSA/Sorting/Quick)|
 | 30 | [Hashtable](./DataStructure/DataStructure/DSA/Hashtable)|
 | 31 | [Hashmap Repeated Word](./DataStructure/DataStructure/DSA/HashmapRepeatedWord)|
-| 33 | [LEFT JOIN for 2 Hashmaps.](./DataStructure/DataStructure/DSA/HashLeftJoin)|
+| 32 | [Tree Intersection](./DataStructure/DataStructure/DSA/Tree-Intersection)|
+| 33 | [LEFT JOIN for 2 Hashmaps](./DataStructure/DataStructure/DSA/HashLeftJoin)|
