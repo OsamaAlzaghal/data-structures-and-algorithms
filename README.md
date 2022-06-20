@@ -30,3 +30,4 @@ This repo is created to update the data structure challenges.
 | 31 | [Hashmap Repeated Word](./DataStructure/DataStructure/DSA/HashmapRepeatedWord)|
 | 32 | [Tree Intersection](./DataStructure/DataStructure/DSA/Tree-Intersection)|
 | 33 | [LEFT JOIN for 2 Hashmaps](./DataStructure/DataStructure/DSA/HashLeftJoin)|
+| 35 | [Graph](./DataStructure/DataStructure/DSA/Graph-Implementation)|

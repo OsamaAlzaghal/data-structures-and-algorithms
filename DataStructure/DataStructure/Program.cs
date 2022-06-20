@@ -2,6 +2,7 @@
 //using Node = DataStructure.DSA.Tree.Node;
 using DataStructure.DSA.Tree_Intersection;
 using System.Collections.Generic;
+using DataStructure.DSA.Graph_Implementation;
 
 namespace DataStructure
 {
@@ -115,17 +116,25 @@ namespace DataStructure
             //Quick_Sort.QuickSortMethod(array, 0, array.Length - 1);
             //Quick_Sort.PrintArray(array);
 
-            TreeIntersection intersection = new TreeIntersection();
+            //TreeIntersection intersection = new TreeIntersection();
 
-            BinarySearchTree tree1 = new BinarySearchTree();
-            tree1.Add(150); tree1.Add(100); tree1.Add(250); tree1.Add(75); tree1.Add(160);
-            tree1.Add(125); tree1.Add(175); tree1.Add(200); tree1.Add(300); tree1.Add(350); tree1.Add(500);
+            //BinarySearchTree tree1 = new BinarySearchTree();
+            //tree1.Add(150); tree1.Add(100); tree1.Add(250); tree1.Add(75); tree1.Add(160);
+            //tree1.Add(125); tree1.Add(175); tree1.Add(200); tree1.Add(300); tree1.Add(350); tree1.Add(500);
 
-            BinarySearchTree tree2 = new BinarySearchTree();
-            tree2.Add(42); tree2.Add(100); tree2.Add(600); tree2.Add(15); tree2.Add(160); tree2.Add(125);
-            tree2.Add(175); tree2.Add(500); tree2.Add(4); tree2.Add(200); tree2.Add(350);
+            //BinarySearchTree tree2 = new BinarySearchTree();
+            //tree2.Add(42); tree2.Add(100); tree2.Add(600); tree2.Add(15); tree2.Add(160); tree2.Add(125);
+            //tree2.Add(175); tree2.Add(500); tree2.Add(4); tree2.Add(200); tree2.Add(350);
 
-            TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
+            //TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
+
+            Graph graph = new Graph();
+            graph.AddNode(1);
+            graph.AddNode(2);
+            graph.AddEdge(1, 2, 10);
+            var x = graph.GetNeighbors(1);
+            // 2
+            System.Console.WriteLine(x.ContainsKey(1));
         }
     }
 }
