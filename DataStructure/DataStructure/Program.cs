@@ -130,12 +130,48 @@ namespace DataStructure
             //TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
 
             Graph graph = new Graph();
-            graph.AddNode("Osama");
-            graph.AddNode("Ali");
-            graph.AddEdge("Osama", "Ali", 10);
-            Dictionary<string, int> x = graph.GetNeighbors("Osama"); // Node: Osama    Neighbors: <Ali, 10>
-            // Ali
-            Console.WriteLine(x.ContainsKey("Ali"));
+            graph.AddNode("Pandora");
+            graph.AddNode("Arendelle");
+            graph.AddNode("Metroville");
+            graph.AddNode("Monstroplolis");
+            graph.AddNode("Narnia");
+            graph.AddNode("Naboo");
+
+            graph.AddEdge("Pandora", "Arendelle", 10);
+            graph.AddEdge("Arendelle", "Metroville", 10);
+            graph.AddEdge("Arendelle", "Monstroplolis", 10);
+            graph.AddEdge("Metroville", "Narnia", 10);
+            graph.AddEdge("Metroville", "Naboo", 10);
+            graph.AddEdge("Naboo", "Narnia", 10);
+            graph.AddEdge("Monstroplolis", "Naboo", 10);
+            graph.AddEdge("Monstroplolis", "Metroville", 10);
+
+            var list = graph.BreadthFirst("Pandora");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.Value);
+            }
+            // *************************************************************** //
+            Graph graph2 = new Graph();
+            graph2.AddNode("Pandora");
+            graph2.AddNode("Arendelle");
+            graph2.AddNode("Metroville");
+            graph2.AddNode("Monstroplolis");
+            graph2.AddNode("Narnia");
+            graph2.AddNode("Naboo");
+
+            graph2.AddEdge("Pandora", "Arendelle", 150);
+            graph2.AddEdge("Pandora", "Metroville", 82);
+            graph2.AddEdge("Arendelle", "Monstroplolis", 42);
+            graph2.AddEdge("Arendelle", "Metroville", 99);
+            graph2.AddEdge("Metroville", "Naboo", 26);
+            graph2.AddEdge("Metroville", "Narnia", 37);
+            graph2.AddEdge("Monstroplolis", "Naboo", 73);
+            graph2.AddEdge("Monstroplolis", "Metroville", 105);
+            graph2.AddEdge("Naboo", "Narnia", 250);
+
+            
             
         }
     }
