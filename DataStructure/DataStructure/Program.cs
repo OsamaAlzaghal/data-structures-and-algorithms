@@ -3,6 +3,7 @@
 using DataStructure.DSA.Tree_Intersection;
 using System.Collections.Generic;
 using DataStructure.DSA.Graph_Implementation;
+using System;
 
 namespace DataStructure
 {
@@ -129,12 +130,13 @@ namespace DataStructure
             //TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
 
             Graph graph = new Graph();
-            graph.AddNode(1);
-            graph.AddNode(2);
-            graph.AddEdge(1, 2, 10);
-            var x = graph.GetNeighbors(1);
-            // 2
-            System.Console.WriteLine(x.ContainsKey(1));
+            graph.AddNode("Osama");
+            graph.AddNode("Ali");
+            graph.AddEdge("Osama", "Ali", 10);
+            Dictionary<string, int> x = graph.GetNeighbors("Osama"); // Node: Osama    Neighbors: <Ali, 10>
+            // Ali
+            Console.WriteLine(x.ContainsKey("Ali"));
+            
         }
     }
 }

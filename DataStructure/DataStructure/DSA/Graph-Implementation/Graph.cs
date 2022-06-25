@@ -15,18 +15,20 @@ namespace DataStructure.DSA.Graph_Implementation
             this.vertexSet = new HashSet<Node>();
         }
 
-        public Node AddNode(int value)
+        public Node AddNode(string value)
         {
             Node node = new Node(value);
             vertexSet.Add(node);
             return node;
         }
 
-        public void AddEdge(int Value1, int Value2, int weight)
+        public void AddEdge(string Value1, string Value2, int weight)
         {
             try
             {
-                this.GetNode(Value1).AddEdge(Value2, weight);
+                Node node = this.GetNode(Value1);
+                
+                     node.AddEdge(Value2, weight);
                 if (!this.Directed) { this.GetNode(Value2).AddEdge(Value1, weight); }
             }
             
@@ -41,7 +43,7 @@ namespace DataStructure.DSA.Graph_Implementation
             return this.vertexSet;
         }
 
-        private Node GetNode(int value)
+        private Node GetNode(string value)
         {
             try { return vertexSet.Where(x => x.Value == value).Select(x => x).FirstOrDefault(); }
             catch (Exception e)
@@ -50,7 +52,7 @@ namespace DataStructure.DSA.Graph_Implementation
             }
         }
 
-        public Dictionary<int, int> GetNeighbors(int value)
+        public Dictionary<string, int> GetNeighbors(string value)
         {
             return this.GetNode(value).GetAdjacentVertices();
         }
@@ -63,17 +65,17 @@ namespace DataStructure.DSA.Graph_Implementation
 
     public class Node
     {
-        public readonly int Value;
+        public readonly string Value;
         // <Vertex, Weight>
-        public readonly Dictionary<int, int> Neighbors;
+        public readonly Dictionary<string, int> Neighbors;
 
-        public Node(int value)
+        public Node(string value)
         {
             this.Value = value;
-            this.Neighbors = new Dictionary<int, int>();
+            this.Neighbors = new Dictionary<string, int>();
         }
 
-        public void AddEdge(int value, int weight)
+        public void AddEdge(string value, int weight)
         {
             if (this.Value == value)
             {
@@ -83,7 +85,7 @@ namespace DataStructure.DSA.Graph_Implementation
             this.Neighbors.Add(value, weight);
         }
 
-        public Dictionary<int, int> GetAdjacentVertices()
+        public Dictionary<string, int> GetAdjacentVertices()
         {
             return this.Neighbors;
         }
