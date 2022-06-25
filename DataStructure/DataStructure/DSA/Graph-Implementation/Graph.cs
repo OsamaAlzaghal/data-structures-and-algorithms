@@ -6,8 +6,8 @@ namespace DataStructure.DSA.Graph_Implementation
 {
     public class Graph
     {
-        private readonly HashSet<Node> vertexSet;
-        private readonly bool Directed;
+        public readonly HashSet<Node> vertexSet;
+        protected readonly bool Directed;
 
         public Graph(bool directed = false)
         {
@@ -60,6 +60,40 @@ namespace DataStructure.DSA.Graph_Implementation
         public int Size()
         {
             return this.vertexSet.Count;
+        }
+
+        public List<Node> BreadthFirst(string value)
+        {
+            Node vertex = this.GetNode(value);
+            if(vertex == null)
+            {
+                Console.WriteLine("Node was not found!");
+                return null;
+            }
+
+            List<Node> nodes = new List<Node>();
+            Queue<Node> breadth = new Queue<Node>();
+            HashSet<Node> visited = new HashSet<Node>();
+
+            breadth.Enqueue(vertex);
+            visited.Add(vertex);
+
+            while (breadth.Count != 0)
+            {
+                Node front = breadth.Dequeue();
+                nodes.Add(front);
+
+                foreach (var item in front.Neighbors)
+                {
+                    var childNode = this.GetNode(item.Key);
+                    if (!visited.Contains(childNode))
+                    {
+                        visited.Add(childNode);
+                        breadth.Enqueue(childNode);
+                    }
+                }
+            }
+            return nodes;
         }
     }
 
