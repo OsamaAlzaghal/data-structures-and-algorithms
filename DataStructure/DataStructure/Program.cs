@@ -129,29 +129,26 @@ namespace DataStructure
 
             //TreeIntersection.PrintList(intersection.Tree_Intersection(tree1, tree2));
 
-            Graph graph = new Graph();
-            graph.AddNode("Pandora");
-            graph.AddNode("Arendelle");
-            graph.AddNode("Metroville");
-            graph.AddNode("Monstroplolis");
-            graph.AddNode("Narnia");
-            graph.AddNode("Naboo");
+            //Graph graph = new Graph();
+            //graph.AddNode("Pandora");
+            //graph.AddNode("Arendelle");
+            //graph.AddNode("Metroville");
+            //graph.AddNode("Monstroplolis");
+            //graph.AddNode("Narnia");
+            //graph.AddNode("Naboo");
 
-            graph.AddEdge("Pandora", "Arendelle", 10);
-            graph.AddEdge("Arendelle", "Metroville", 10);
-            graph.AddEdge("Arendelle", "Monstroplolis", 10);
-            graph.AddEdge("Metroville", "Narnia", 10);
-            graph.AddEdge("Metroville", "Naboo", 10);
-            graph.AddEdge("Naboo", "Narnia", 10);
-            graph.AddEdge("Monstroplolis", "Naboo", 10);
-            graph.AddEdge("Monstroplolis", "Metroville", 10);
+            //graph.AddEdge("Pandora", "Arendelle", 10);
+            //graph.AddEdge("Arendelle", "Metroville", 10);
+            //graph.AddEdge("Arendelle", "Monstroplolis", 10);
+            //graph.AddEdge("Metroville", "Narnia", 10);
+            //graph.AddEdge("Metroville", "Naboo", 10);
+            //graph.AddEdge("Naboo", "Narnia", 10);
+            //graph.AddEdge("Monstroplolis", "Naboo", 10);
+            //graph.AddEdge("Monstroplolis", "Metroville", 10);
 
-            var list = graph.BreadthFirst("Pandora");
+            //var list = graph.BreadthFirst("Pandora");
 
-            foreach (var item in list)
-            {
-                Console.WriteLine(item.Value);
-            }
+            
             // *************************************************************** //
             Graph graph2 = new Graph();
             graph2.AddNode("Pandora");
@@ -171,8 +168,12 @@ namespace DataStructure
             graph2.AddEdge("Monstroplolis", "Metroville", 105);
             graph2.AddEdge("Naboo", "Narnia", 250);
 
+            Console.WriteLine(graph2.BusinessTrip(graph2, new string[] { "Arendelle", "Monstroplolis", "Naboo" }));
             
-            
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
         }
     }
 }

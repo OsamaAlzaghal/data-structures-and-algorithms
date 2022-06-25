@@ -27,12 +27,12 @@ namespace DataStructure.DSA.Graph_Implementation
             try
             {
                 Node node = this.GetNode(Value1);
-                
-                     node.AddEdge(Value2, weight);
+
+                node.AddEdge(Value2, weight);
                 if (!this.Directed) { this.GetNode(Value2).AddEdge(Value1, weight); }
             }
-            
-            catch(Exception e)
+
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -65,7 +65,7 @@ namespace DataStructure.DSA.Graph_Implementation
         public List<Node> BreadthFirst(string value)
         {
             Node vertex = this.GetNode(value);
-            if(vertex == null)
+            if (vertex == null)
             {
                 Console.WriteLine("Node was not found!");
                 return null;
@@ -94,6 +94,33 @@ namespace DataStructure.DSA.Graph_Implementation
                 }
             }
             return nodes;
+        }
+
+        public int? BusinessTrip(Graph graph, string[] arr)
+        {
+            if (arr == null || graph == null || arr.Length == 1) { return null; }
+            Node vertex = graph.GetNode(arr[0]);
+            if (vertex == null)
+            {
+                return null;
+            }
+
+            int sum = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                Node current = graph.GetNode(arr[i]);
+                Node next = graph.GetNode(arr[i + 1]);
+                string key = next.Value;
+                if (current.Neighbors.ContainsKey(key))
+                {
+                    sum += current.Neighbors[key];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            return sum;
         }
     }
 
