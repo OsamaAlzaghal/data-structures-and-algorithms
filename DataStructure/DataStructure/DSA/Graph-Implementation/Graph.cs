@@ -40,10 +40,11 @@ namespace DataStructure.DSA.Graph_Implementation
 
         public HashSet<Node> GetNodes()
         {
+            if(this.vertexSet.Count == 0) { return null; }
             return this.vertexSet;
         }
 
-        private Node GetNode(string value)
+        public Node GetNode(string value)
         {
             try { return vertexSet.Where(x => x.Value == value).Select(x => x).FirstOrDefault(); }
             catch (Exception e)

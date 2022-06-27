@@ -70,8 +70,8 @@ Graph Class:
 ```
 public class Graph
     {
-        private readonly HashSet<Node> vertexSet;
-        private readonly bool Directed;
+        public readonly HashSet<Node> vertexSet;
+        protected readonly bool Directed;
 
         public Graph(bool directed = false)
         {
@@ -79,22 +79,24 @@ public class Graph
             this.vertexSet = new HashSet<Node>();
         }
 
-        public Node AddNode(int value)
+        public Node AddNode(string value)
         {
             Node node = new Node(value);
             vertexSet.Add(node);
             return node;
         }
 
-        public void AddEdge(int Value1, int Value2, int weight)
+        public void AddEdge(string Value1, string Value2, int weight)
         {
             try
             {
-                this.GetNode(Value1).AddEdge(Value2, weight);
+                Node node = this.GetNode(Value1);
+
+                node.AddEdge(Value2, weight);
                 if (!this.Directed) { this.GetNode(Value2).AddEdge(Value1, weight); }
             }
-            
-            catch(Exception e)
+
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -102,10 +104,11 @@ public class Graph
 
         public HashSet<Node> GetNodes()
         {
+            if(this.vertexSet.Count == 0) { return null; }
             return this.vertexSet;
         }
 
-        private Node GetNode(int value)
+        public Node GetNode(string value)
         {
             try { return vertexSet.Where(x => x.Value == value).Select(x => x).FirstOrDefault(); }
             catch (Exception e)
@@ -114,7 +117,7 @@ public class Graph
             }
         }
 
-        public Dictionary<int, int> GetNeighbors(int value)
+        public Dictionary<string, int> GetNeighbors(string value)
         {
             return this.GetNode(value).GetAdjacentVertices();
         }
@@ -132,17 +135,17 @@ public class Graph
 ```
 public class Node
     {
-        public readonly int Value;
+        public readonly string Value;
         // <Vertex, Weight>
-        public readonly Dictionary<int, int> Neighbors;
+        public readonly Dictionary<string, int> Neighbors;
 
-        public Node(int value)
+        public Node(string value)
         {
             this.Value = value;
-            this.Neighbors = new Dictionary<int, int>();
+            this.Neighbors = new Dictionary<string, int>();
         }
 
-        public void AddEdge(int value, int weight)
+        public void AddEdge(string value, int weight)
         {
             if (this.Value == value)
             {
@@ -152,7 +155,7 @@ public class Node
             this.Neighbors.Add(value, weight);
         }
 
-        public Dictionary<int, int> GetAdjacentVertices()
+        public Dictionary<string, int> GetAdjacentVertices()
         {
             return this.Neighbors;
         }
