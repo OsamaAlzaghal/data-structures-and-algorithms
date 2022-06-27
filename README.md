@@ -31,3 +31,5 @@ This repo is created to update the data structure challenges.
 | 32 | [Tree Intersection](./DataStructure/DataStructure/DSA/Tree-Intersection)|
 | 33 | [LEFT JOIN for 2 Hashmaps](./DataStructure/DataStructure/DSA/HashLeftJoin)|
 | 35 | [Graph](./DataStructure/DataStructure/DSA/Graph-Implementation)|
+| 36 | [Graph BFS](./DataStructure/DataStructure/DSA/GraphBFS)|
+| 37 | [Graph Business Trip](./DataStructure/DataStructure/DSA/GraphBusinessTrip)|

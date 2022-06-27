@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="DSA\GraphBusinessTrip\Assets\" />
     <Folder Include="DSA\HashLeftJoin\Assets\" />
     <Folder Include="DSA\LinkedListZip\" />
   </ItemGroup>
