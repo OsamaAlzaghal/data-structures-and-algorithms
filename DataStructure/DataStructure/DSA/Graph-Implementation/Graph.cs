@@ -111,6 +111,7 @@ namespace DataStructure.DSA.Graph_Implementation
             {
                 Node current = graph.GetNode(arr[i]);
                 Node next = graph.GetNode(arr[i + 1]);
+                if(current == null || next == null) { return null; }
                 string key = next.Value;
                 if (current.Neighbors.ContainsKey(key))
                 {
