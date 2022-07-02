@@ -97,6 +97,38 @@ namespace DataStructure.DSA.Graph_Implementation
             return nodes;
         }
 
+
+        public HashSet<Node> DFS(string start)
+        {
+            Node node = this.GetNode(start);
+            if(node == null) { return null; }
+
+            var visited = new HashSet<Node>();
+            Stack<Node> stack = new Stack<Node>();
+            stack.Push(node);
+
+            while (stack.Count > 0)
+            {
+                Node vertex = stack.Pop();
+
+                if (visited.Contains(vertex))
+                    continue;
+
+                visited.Add(vertex);
+
+                foreach (var neighbor in vertex.Neighbors)
+                {
+                    Node temp = this.GetNode(neighbor.Key);
+                    if (!visited.Contains(temp))
+                    {
+                        stack.Push(temp);
+                    }
+                }
+            }
+
+            return visited;
+        }
+
         public int? BusinessTrip(Graph graph, string[] arr)
         {
             if (arr == null || graph == null || arr.Length == 1) { return null; }
